@@ -14,7 +14,7 @@ class Array:
     def add(self, value):
         if self.cur >= len(self.arr):
             self.arr += [self.fill] * self.capacity
-        self.set(self.cur,value)
+        self.set(self.cur, value)
         self.cur += 1
 
     def __str__(self):
