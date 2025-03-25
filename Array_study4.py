@@ -4,7 +4,6 @@ class Array:
         self.fill = fill
         self.capacity = capacity
         self.cur = 0
-        self.iter_cur = 0
 
     def get(self, index):
         return self.arr[index]
