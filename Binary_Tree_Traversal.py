@@ -80,7 +80,49 @@ def traverse(tree: TreeBinary | None) -> list[TreeBinary.Node]:
         cur = stack.pop()
         ret.append(cur)
         cur = cur.right
-    return ret        
+    return ret
+
+    # def preorder(tree: TreeBinary | None) -> list[TreeBinary.Node]:
+    #     if not tree or not tree.root:
+    #         return []
+
+    #     ret: list[TreeBinary.Node] = []
+    #     stack: list[TreeBinary.Node] = [tree.root]
+
+    #     while stack:
+    #         node = stack.pop()
+    #         ret.append(node)
+
+    #         # 오른쪽을 먼저 넣어야 왼쪽이 먼저 나오므로
+    #         if node.right:
+    #             stack.append(node.right)
+    #         if node.left:
+    #             stack.append(node.left)
+
+    #     return ret
+
+
+    # def postorder(tree: TreeBinary | None) -> list[TreeBinary.Node]:
+    #     if not tree or not tree.root:
+    #         return []
+
+    #     ret: list[TreeBinary.Node] = []
+    #     stack1: list[TreeBinary.Node] = [tree.root]
+    #     stack2: list[TreeBinary.Node] = []
+
+    #     while stack1:
+    #         node = stack1.pop()
+    #         stack2.append(node)
+    #         if node.left:
+    #             stack1.append(node.left)
+    #         if node.right:
+    #             stack1.append(node.right)
+
+    #     while stack2:
+    #         ret.append(stack2.pop())
+
+    #     return ret 
+            
     
 
 if __name__ == "__main__":
